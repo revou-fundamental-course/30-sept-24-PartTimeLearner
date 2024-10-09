@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator Fahrenheit Adam</title>
+    <script src="js/script.js"></script>
 </head>
 <body>
     <header>
@@ -16,41 +17,45 @@
         <section>
             <!-- instruksi -->
              <article>
-                <p>Lorem ipsum dolor sit amet</p>
+                <p>Masukkan suhu derajat Celcius (&deg;C) ke kotak dibawah, lalu klik tombol "Konversi" <br> untuk mendapatkan hasil konversi</p>
              </article>
 
             <!-- Input suhu  -->
-             <form>
+             <form onsubmit="return false;"> <!-- Prevent form submission and page reload -->
                 <div>
-                     <label for="input-suhu">Celcius (&deg;C)</label><br>
+                     <label for="input-suhu" id="input-label">Celcius (&deg;C)</label><br>
                 </div>
                 <div>
-                    <textarea name="" id="input-suhu"></textarea>
+                    <textarea name="input-suhu" id="input-suhu" placeholder="Masukkan suhu"></textarea>
                 </div>
-                <button>Konversi</button>
-                <button>Reset</button>
-                <button>Reverse</button>
+                <div class="button">
+                    <button onclick="calculate()" class="btn">Konversi</button>
+                    <button onclick="reset_value()" class="btn">Reset</button>
+                    <button onclick="reverse()" class="btn">Reverse</button>
+                </div>
              </form>
 
-            <!-- Hasil input -->
-            <div></div>
-            <div>
-                 <label for="hasil-suhu">Fahrenheit (&deg;F)</label><br>
+            <!-- Hasil output -->
+            <div class="results">
+               <div>
+                    <label for="hasil-suhu" id="hasil-label">Fahrenheit (&deg;F)</label><br>
+               </div>
+               <div>
+                  <textarea name="" id="hasil-suhu" readonly></textarea>
+               </div>
             </div>
-            <div>
-               <textarea name="" id="hasil-suhu"></textarea>
-            </div>
-            
             <!-- Cara kalkulasi -->
-             <div>
-                <label for="how-to-suhu">Cara Kalkulasi:</label>
-             </div>
-             <div>
-                <textarea id="how-to-suhu"></textarea>
-             </div>
-             <div>
-                Fahrenheit ke Celcius
-             </div>
+            <div class="calcWay">
+                <div>
+                    <label for="how-to-suhu">Cara Kalkulasi:</label>
+                 </div>
+                 <div>
+                    <textarea id="how-to-suhu" readonly></textarea>
+                 </div>
+                 <div id="mode-text">
+                    Mode: Celsius ke Fahrenheit
+                 </div>
+            </div>
         </section>
         <section>
             <header>
@@ -63,20 +68,16 @@
                     Celcius (&deg;C) kali 9/5 tambah 32
                 </p>
                 <p>
-                    <Span class="suhu-style">S</Span> <sub>(&deg;F)</sub> = (<Span class="suhu-style">S</Span><sub>(&deg;C)</sub> x 9/5) + 32
+                    <span class="suhu-style">S</span> <sub>(&deg;F)</sub> = (<span class="suhu-style">S</span><sub>(&deg;C)</sub> x 9/5) + 32
                 </p>
                 <p>
                     atau
                 </p>
                 <p>
-                    <Span class="suhu-style">S</Span> <sub>(&deg;F)</sub> = (<Span class="suhu-style">S</Span><sub>(&deg;C)</sub> x 1.8) + 32
+                    <span class="suhu-style">S</span> <sub>(&deg;F)</sub> = (<span class="suhu-style">S</span><sub>(&deg;C)</sub> x 1.8) + 32
                 </p>
             </article>
         </section>
     </main>
-    <!-- <article>
-        Masukkan suhu derajat C
-    </article> -->
-    
 </body>
 </html>

@@ -1,8 +1,69 @@
+*{
+    background-color: rgb(1, 0, 40) ;
+    color: white;
+}
+
+body {
+    text-align: left;
+}
+
+header{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+article, #mode-text{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+label{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.button{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.results{
+    margin-bottom: 20px;
+}
+
+
 .suhu-style{
     font-size: 18px;
     font-family: math;
     font-style: italic;
 }
-*{
-    background-color: antiquewhite ;
+
+textarea {
+    width: 50vw;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+    color: black;
+  }
+
+.btn{
+    background-color: #291b45;
+    border-style:outset;
+    border-color: aqua;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
+#mode-text{
+    color: whitesmoke;
+}
+
+
